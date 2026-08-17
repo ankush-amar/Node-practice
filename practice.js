@@ -11,13 +11,16 @@ const server = http.createServer((req, res) => {
         return res.end();
     }else if(req.url === '/women'){
         res.write('<h1>Welcome to womens page</h1>');
-        res.end();
+        return res.end();    
+    }else if(req.url === '/kids'){
+        res.write('<h1>Welcome to Kids section</h1>');
+        return res.end();
     }else if(req.url === '/cart'){
-        res.write('<h1>Go to Cart</h1>');
-        res.end();
+        res.write('<h1>Go to cart</h1>');
+        return res.end();
     }
-    res.write('<h1>Welcome to Myntra!');
-    return res.end();
+    // res.write('<h1>Welcome to Myntra!');
+    // return res.end();
 
     res.write(`
         <html lang="en">
@@ -32,7 +35,7 @@ const server = http.createServer((req, res) => {
                 <li><a href="/men">Men</a></li>
                 <li><a href="/women">Women</a></li>
                 <li><a href="/kids">Kids</a></li>
-                <li><a href="/cart">🛒</a></li>
+                <li><a href="/cart">Cart</a></li>
             </ul>
         </nav>
     </hread>
