@@ -18,9 +18,13 @@ const server = http.createServer((req, res) => {
     }else if(req.url === '/cart'){
         res.write('<h1>Go to cart</h1>');
         return res.end();
+    }else if(req.url === '/sales'){
+        res.write('<h1>Sale is Live!');
+        return res.end();
+    }else if(req.url === '/special'){
+        res.write('<h1>Some special offer for you');
+        return res.end();
     }
-    // res.write('<h1>Welcome to Myntra!');
-    // return res.end();
 
     res.write(`
         <html lang="en">
@@ -36,6 +40,8 @@ const server = http.createServer((req, res) => {
                 <li><a href="/women">Women</a></li>
                 <li><a href="/kids">Kids</a></li>
                 <li><a href="/cart">Cart</a></li>
+                <li><a href="/sales">Sale</a></li>
+                <li><a href="/special">Special</a></li>
             </ul>
         </nav>
     </hread>
