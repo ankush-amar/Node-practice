@@ -2,6 +2,23 @@ const http = require('http');
 
 const server = http.createServer((req, res) => {
     console.log(req.url, req.headers);
+
+    if(req.url === '/home'){
+        res.write('<h1>Welcome Home</h1>');
+        return res.end();
+    }else if(req.url === '/men'){
+        res.write('<h1>Welcome to Mens page</h1>');
+        return res.end();
+    }else if(req.url === '/women'){
+        res.write('<h1>Welcome to womens page</h1>');
+        res.end();
+    }else if(req.url === '/cart'){
+        res.write('<h1>Go to Cart</h1>');
+        res.end();
+    }
+    res.write('<h1>Welcome to Myntra!');
+    return res.end();
+
     res.write(`
         <html lang="en">
 <head>
@@ -21,7 +38,8 @@ const server = http.createServer((req, res) => {
     </hread>
 </body>
 </html>
-    `);   
+    `);
+    res.end();   
 
 });
 
