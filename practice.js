@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
     <title>Document</title>
 </head>
 <body>
-    <hread>
+    <head>
         <nav>
             <ul>
                 <li><a href="/home">Home</a></li>
@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
                 <li><a href="/special">Special</a></li>
             </ul>
         </nav>
-    </hread>
+    </head>
 </body>
 </html>
     `);
