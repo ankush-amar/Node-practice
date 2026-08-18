@@ -49,10 +49,10 @@ const server = http.createServer((req, res) => {
         </nav>
     </head>
         <footer>
-        <ul>
-            <li><a href="/myntra">Myntra</a></li>
-        </ul>
-    </footer>
+            <ul>
+                <li><a href="/myntra">Myntra</a></li>
+            </ul>
+        </footer>
 </body>
 </html>
     `);
