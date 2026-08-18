@@ -24,6 +24,9 @@ const server = http.createServer((req, res) => {
     }else if(req.url === '/special'){
         res.write('<h1>Some special offer for you');
         return res.end();
+    }else if(req.url === '/myntra'){
+        res.write('<h1>Welcome to Myntra Indias No.1 shopping brand');
+        return res.end();
     }
 
     res.write(`
@@ -45,6 +48,11 @@ const server = http.createServer((req, res) => {
             </ul>
         </nav>
     </head>
+        <footer>
+        <ul>
+            <li><a href="/myntra">Myntra</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
     `);
