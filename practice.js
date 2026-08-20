@@ -27,6 +27,9 @@ const server = http.createServer((req, res) => {
     }else if(req.url === '/myntra'){
         res.write('<h1>Welcome to Myntra Indias No.1 shopping brand');
         return res.end();
+    }else if(req.url === '/all'){
+        res.write('<h1>Home</h1>');
+        return res.end();
     }
 
     res.write(`
