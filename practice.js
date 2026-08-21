@@ -30,6 +30,12 @@ const server = http.createServer((req, res) => {
     }else if(req.url === '/all'){
         res.write('<h1>Home</h1>');
         return res.end();
+    }else if(req.url === '/beauty'){
+        res.write('<h1>Give your skin a personal care</h1>');
+        return res.end();
+    }else if(req.url === '/foot'){
+        res.write('<h1>Select your perfect fit');
+        
     }
 
     res.write(`
