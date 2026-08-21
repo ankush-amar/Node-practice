@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
         return res.end();
     }else if(req.url === '/access'){
         res.write('<h1>Find your favorite accessories');
-        res.end();
+        return res.end();
     }
 
     res.write(`
@@ -57,6 +57,9 @@ const server = http.createServer((req, res) => {
                 <li><a href="/cart">Cart</a></li>
                 <li><a href="/sales">Sale</a></li>
                 <li><a href="/special">Special</a></li>
+                <li><a href="/access">Accessories</a></li>
+                <li><a href="/foot">Footware</a></li>
+                <li><a href="/beauty">Beauty</a></li>
             </ul>
         </nav>
     </head>
