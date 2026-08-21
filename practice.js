@@ -35,7 +35,10 @@ const server = http.createServer((req, res) => {
         return res.end();
     }else if(req.url === '/foot'){
         res.write('<h1>Select your perfect fit');
-        
+        return res.end();
+    }else if(req.url === '/access'){
+        res.write('<h1>Find your favorite accessories');
+        res.end();
     }
 
     res.write(`
